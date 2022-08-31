@@ -38,14 +38,11 @@ function pickPictureGalleryItem(event) {
     `)
     instance.show();
     
-    const galleryItem = document.querySelector('.gallery__item')
-    
-    galleryItem.addEventListener('keydown', closeModalPicture);
+    galleryMain.addEventListener('keydown', closeModalPicture);
     function closeModalPicture(event) {
       console.log(event);
-        if(event.code === 'Escape') {
+        if(event.key === 'Escape') {
           instance.close()
-        }
-    };
+        };
 };
-
+}
