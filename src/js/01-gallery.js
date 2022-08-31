@@ -23,7 +23,6 @@ function createGalleryMarkup(galleryItems) {
 
 galleryMain.insertAdjacentHTML('afterbegin', galleryMarkup);
 galleryMain.addEventListener('click', pickPictureGalleryItem);
-const biggerElPicture = document.querySelector(('img[data-source]'));
 
 
 function pickPictureGalleryItem(event) {
@@ -40,11 +39,12 @@ function pickPictureGalleryItem(event) {
     `)
     instance.show();
     
-    window.addEventListener('keydown', closeModalPicture);
     
+    galleryMain.addEventListener('keydown', closeModalPicture);
     function closeModalPicture(event) {
         if(event.code === 'Escape') {
-            instance.close()
+          instance.close()
+            console.log(event.code);
         }
     };
 };
