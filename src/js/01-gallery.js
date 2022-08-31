@@ -41,7 +41,7 @@ function pickPictureGalleryItem(event) {
     galleryMain.addEventListener('keydown', closeModalPicture);
     function closeModalPicture(event) {
       console.log(event);
-        if(event.key === 'Escape') {
+        if(event.code === 'Escape') {
           instance.close()
         };
 };
